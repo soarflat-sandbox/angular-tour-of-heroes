@@ -2,11 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
-## 生成されるファイルの詳細
+## 学習メモ
 
-- `app.component.ts`— TypeScriptで書かれたコンポーネントクラスのコード。
-- `app.component.html`— HTMLで書かれたコンポーネントのテンプレート。
-- `app.component.css`— このコンポーネント専用のCSS。
+### `ng genetare component`
+
+`ng genetare component`コマンドはコンポーネントの雛形を生成するコマンド。
+
+以下の場合、`hero-detail`コンポーネントの雛形を生成する。
+
+```bash
+$ ng generate component hero-detail
+src/app/hero-detail/hero-detail.component.scss # コンポーネントの SCSS ファイル
+src/app/hero-detail/hero-detail.component.html # コンポーネントのテンプレートファイル
+src/app/hero-detail/hero-detail.component.spec.ts # コンポーネントのテストファイル
+src/app/hero-detail/hero-detail.component.ts # コンポーネントクラスのファイル
+```
+
+また、`src/app/app.module.ts`で`hero-detail`コンポーネントをインポートし、`declarations`に`HeroDetailComponent`が追加される。
+
+```ts
+// 省略...
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+// 省略...
+
+@NgModule({
+  declarations: [
+    // 省略...
+    // HeroDetailComponent を宣言しているので、テンプレートで <hero-detail> を利用できる。
+    HeroDetailComponent
+  ],
+// 省略...
+})
+```
 
 ## Development server
 
