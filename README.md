@@ -35,6 +35,22 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 })
 ```
 
+### `ng generate service`
+
+`ng generate service`はサービスの雛形を作成するコマンド。
+
+以下のコマンドを実行した場合、`hero`サービスの雛形を生成する。
+
+```bash
+$ ng generate component hero
+src/app/hero.service.ts # サービスクラスのファイル
+src/app/hero.service.spec.ts # サービスのテストファイル
+```
+
+サービスをプロバイダとして登録すれば、そのサービスを注入できる。
+
+サービスが注入されたコンポーネントは、そのサービスが提供するデータやメソッドにアクセスできる。
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     // HeroesComponent を宣言しているので、テンプレートで <app-heroes> を利用できる。
     HeroesComponent,
     // HeroDetailComponent を宣言しているので、テンプレートで <app-hero-detail> を利用できる。
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
