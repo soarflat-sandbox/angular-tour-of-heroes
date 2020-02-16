@@ -51,6 +51,19 @@ src/app/hero.service.spec.ts # サービスのテストファイル
 
 サービスが注入されたコンポーネントは、そのサービスが提供するデータやメソッドにアクセスできる。
 
+### `ng generate module`
+
+モジュールの雛形を作成するコマンド。
+
+以下のコマンドを実行した場合、`app-routing`モジュールの雛形を作成。
+
+```bash
+$ ng generate module app-routing --flat --module=app
+```
+
+- `--flat`オプションを付与することで、`src/app`にファイルが生成される。
+- `--module=app`オプションを付与することで、`app.module.ts`に作成したモジュールをインポートする記述が追加される。
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
